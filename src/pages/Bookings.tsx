@@ -23,6 +23,8 @@ const Bookings = () => {
     duration: '',
     additionalInfo: '',
   });
+
+  // Removed whatsappNumber state as manual input is no longer needed
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -47,7 +49,29 @@ const Bookings = () => {
     }
     
     setIsSubmitting(true);
-    
+
+    // Construct WhatsApp message
+    const message = `Booking Request Details:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Event Type: ${formData.eventType}
+Number of Guests: ${formData.guests}
+Preferred Venue: ${formData.venue}
+Event Date: ${date ? format(date, 'MMMM d, yyyy') : ''}
+Event Start Time: ${formData.time}
+Duration: ${formData.duration}
+Additional Info: ${formData.additionalInfo}`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Fixed WhatsApp contact number
+    const whatsappNumber = '+15716608569';
+
+    // Open WhatsApp URL in new tab
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+
     // Simulate form submission
     setTimeout(() => {
       toast({
