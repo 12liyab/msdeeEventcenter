@@ -72,12 +72,24 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-gold-400 flex-shrink-0" />
-                <a href="mailto:info@msdeeseventcenter.com" className="text-cream-200 hover:text-gold-400 transition-colors">
-                  info@msdeeseventcenter.com
-                </a>
-              </li>
-            </ul>
-          </div>
+              <a href="mailto:info@msdeeseventcenter.com" className="text-cream-200 hover:text-gold-400 transition-colors">
+                info@msdeeseventcenter.com
+              </a>
+            </li>
+            <li className="mt-4 flex items-center space-x-4">
+              <p className="text-gold-400 font-semibold mb-0">Connect With Us</p>
+              <a href="#" aria-label="Facebook" className="text-cream-200 hover:text-gold-400 transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" aria-label="Instagram" className="text-cream-200 hover:text-gold-400 transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" aria-label="YouTube" className="text-cream-200 hover:text-gold-400 transition-colors">
+                <Youtube className="h-5 w-5" />
+              </a>
+            </li>
+          </ul>
+        </div>
 
           {/* Opening Hours */}
           <div>
@@ -111,17 +123,6 @@ const Footer = () => {
               <a href="#" className="text-cream-200 hover:text-gold-400 transition-colors">
                 Terms of Service
               </a>
-              <div className="flex space-x-4 ml-6">
-                <a href="#" aria-label="Facebook" className="text-cream-200 hover:text-gold-400 transition-colors">
-                  <Facebook className="h-5 w-5" />
-                </a>
-                <a href="#" aria-label="Instagram" className="text-cream-200 hover:text-gold-400 transition-colors">
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a href="#" aria-label="YouTube" className="text-cream-200 hover:text-gold-400 transition-colors">
-                  <Youtube className="h-5 w-5" />
-                </a>
-              </div>
             </div>
           </div>
         </div>
